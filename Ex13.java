@@ -1,14 +1,17 @@
-// Static Variable
+
 class Mobile{
     String brand;
     int price;
     static String name;  // if we want the name(value) should be the same to every obj then we can use static keyword
     public void show(){
       System.out.println(brand+":"+price+":"+name);
-    }      
+    }  
+    public static void show1(Mobile obj)
+    {
+        System.out.println(obj.brand+":"+obj.price+":"+name);
+    }    
 }
-
-public class Ex12 {
+public class Ex13 {
     public static void main(String[] args) {
         Mobile obj1=new Mobile();
         obj1.brand="Apple";
@@ -20,11 +23,9 @@ public class Ex12 {
         obj2.brand="Samsung";
         obj2.price=1700;
         obj2.name="smartphone";
-
-        obj1.name="phone";   //it changes name to every object
         
-        obj1.show();
-        obj2.show();
+        Mobile.show1(obj1);
+        
 
     }
 }
