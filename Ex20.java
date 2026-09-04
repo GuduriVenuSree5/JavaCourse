@@ -10,6 +10,7 @@ class A{   // By default this parent class extends object class
     }
 }
 class B extends A{
+    public char[] marks;
     B(){
         super();
         System.out.println("in B");
